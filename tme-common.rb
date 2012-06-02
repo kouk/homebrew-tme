@@ -1,6 +1,6 @@
 require 'formula'
 
-class TMECommon < Formula
+class TmeCommon < Formula
   head 'https://github.com/trendmicro/tme.git'
   homepage 'http://trendmicro.github.com/tme/'
 # md5 '1234567890ABCDEF1234567890ABCDEF'
