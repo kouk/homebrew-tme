@@ -1,7 +1,7 @@
 require 'formula'
 
 class TMECommon < Formula
-  url 'https://github.com/trendmicro/tme/zipball/osx-lion'
+  head 'https://github.com/trendmicro/tme.git'
   homepage 'http://trendmicro.github.com/tme/'
 # md5 '1234567890ABCDEF1234567890ABCDEF'
 
