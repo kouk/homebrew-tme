@@ -5,7 +5,7 @@ class TmeCommon < Formula
   homepage 'http://trendmicro.github.com/tme/'
 # md5 '1234567890ABCDEF1234567890ABCDEF'
 
-  depends_on 'cmake'
+# depends_on 'cmake'
 # depends_on 'rvm'
 
   def install
