@@ -1,7 +1,7 @@
 Homebrew Formula for TME
 ========================
 
-This repository contains *un*official [Homebrew][brew] formula for installing
+This repository contains *unofficial* [Homebrew][brew] formula for installing
 [TME][tme] on Mac OS X.
 
 Installation
@@ -18,7 +18,8 @@ You can also install via URL:
 
 ### TME Components
 
-Currently, TME components must be installed one by one using the following commands:
+Currently, TME components must be installed one by one using the following
+commands:
 
 	brew install --HEAD tme-common
 	brew install --HEAD tme-broker
@@ -28,7 +29,9 @@ Currently, TME components must be installed one by one using the following comma
 	brew install --HEAD tme-portal-web
 	brew install --HEAD tme-graph-editor
 
-We wish to allow installing all of them at once by `brew install --HEAD tme`, if we confirm that Homebrew support *meta formula*, a formula installs nothing itself but brings all components through dependencies.
+We wish to allow installing all of them at once by `brew install --HEAD tme`,
+if we confirm that Homebrew support *meta formula*, a formula installs nothing
+itself but brings all components through dependencies.
 
 ### Heads Only
 
@@ -52,11 +55,18 @@ running TME using *your* own account directly.
 
 To simplify operation tasks, all TME components are by default installed to
 same directory, `/opt/trend/tme`. On the contrary, Homebrew will install each
-package to individual and isolated folder called *Keg*. The formula will configure *Keg* as the installation `PREFIX` during package building. Since we still wish to separate TME components, they will no longer reside in same `PREFIX`.
+package to individual and isolated folder called *Keg*. The formula will
+configure *Keg* as the installation `PREFIX` during package building. Since we
+still wish to separate TME components, they will no longer reside in same
+`PREFIX`.
 
 ### Will not use launchd to manage daemons
 
-On Mac [launchd][launchd](8) is used to manage services, which is essentially a replacement for `init.d` scripts on Linux. However, since we usually running TME on Mac for development/demonstration purposes only, there is no need to launch TME daemons everytime. Instead, the formula will provide easy command line scripts to initiate/terminate TME environment.
+On Mac [launchd][launchd](8) is used to manage services, which is essentially
+a replacement for `init.d` scripts on Linux. However, since we usually run TME
+on Mac for development/demonstration purposes only, there is no need to launch
+TME daemons everytime. Instead, the formula will provide easy command line
+scripts to initiate/terminate TME environment.
 
 
 [brew]: http://mxcl.github.com/homebrew/
