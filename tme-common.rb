@@ -9,7 +9,10 @@ class TmeCommon < Formula
 # depends_on 'rvm'
 
   def install
-    system "make", "--directory=src/common", "BUILD_PREFIX=#{prefix}", "install"
+    inreplace 'src/common/bin/create_zookeeper_nodes.sh', '/opt/trend/tme/lib', "#{lib}/tme"
+    inreplace 'src/common/bin/daemon.sh', '/var/run/tme', "#{var}/run/tme"
+    inreplace 'src/common/bin/daemon.sh', /^chown /, '#chown '
+    system "make", "--directory=src/common", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc", "LIBPATH=lib/tme", "install"
   end
 end
 
