@@ -1,7 +1,7 @@
 Homebrew Formula for TME
 ========================
 
-This repository contains *unofficial* [Homebrew][brew] formula for installing
+This repository contains *unofficial* [Homebrew][brew] formulae for installing
 [TME][tme] on Mac OS X.
 
 Installation
@@ -41,21 +41,21 @@ version for Mac, yet. You must add `--HEAD` option when running `brew install`.
 Considerations
 --------------
 
-Running TME on Mac OS X is usually for development or demonstration. This formula
-alters TME to adapt the non-production environment.
+Running TME on Mac OS X is usually for development or demonstration. The
+formulae will alter TME to adapt the non-production environment.
 
 ### Running TME in User Account Instead
 
 TME daemons are designed to run in the special system account `TME`. This
 contradict to Homebrew's design, which says [sudo is bad][badsudo].  Therefore,
-the formula will not create the special system account and will expect/help
+these formulae will not create the special system account and will expect/help
 running TME using *your* own account directly.
 
 ### Separate PREFIX for each component
 
 To simplify operation tasks, all TME components are by default installed to
 same directory, `/opt/trend/tme`. On the contrary, Homebrew will install each
-package to individual and isolated folder called *Keg*. The formula will
+package to individual and isolated folder called *Keg*. These formulae will
 configure *Keg* as the installation `PREFIX` during package building. Since we
 still wish to separate TME components, they will no longer reside in same
 `PREFIX`.
@@ -65,8 +65,8 @@ still wish to separate TME components, they will no longer reside in same
 On Mac [launchd][launchd](8) is used to manage services, which is essentially
 a replacement for `init.d` scripts on Linux. However, since we usually run TME
 on Mac for development/demonstration purposes only, there is no need to launch
-TME daemons everytime. Instead, the formula will provide easy command line
-scripts to initiate/terminate TME environment.
+TME daemons everytime. Instead, these formulae will provide easy commands to
+initiate/terminate TME environment.
 
 
 [brew]: http://mxcl.github.com/homebrew/
