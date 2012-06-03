@@ -1,7 +1,7 @@
 require 'formula'
 
 class TmeCommon < Formula
-  head 'https://github.com/trendmicro/tme.git'
+  head 'https://github.com/trendmicro/tme.git', :branch => 'osx-lion'
   homepage 'http://trendmicro.github.com/tme/'
 # md5 '1234567890ABCDEF1234567890ABCDEF'
 
