@@ -18,6 +18,9 @@ class TmeMist < Formula
     mv "#{prefix}/usr/bin/tme-console",    "#{prefix}/bin/"
     remove_dir "#{prefix}/usr/bin"
     remove_dir "#{prefix}/usr"
+
+    # No need to have init.d scripts.
+    remove_dir "#{prefix}/etc/init.d"
   end
 end
 

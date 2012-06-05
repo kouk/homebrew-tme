@@ -11,6 +11,9 @@ class TmeBroker < Formula
 
   def install
     system "make", "--directory=src/broker", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-broker", "install"
+
+    # No need to have init.d scripts.
+    remove_dir "#{prefix}/etc/init.d"
   end
 end
 

@@ -12,6 +12,9 @@ class TmePortalWeb < Formula
 
   def install
     system "make", "--directory=src/portal-web", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-portal-web", "install"
+
+    # No need to have init.d scripts.
+    remove_dir "#{prefix}/etc/init.d"
   end
 end
 

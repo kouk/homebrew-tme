@@ -11,6 +11,9 @@ class TmeGraphEditor < Formula
 
   def install
     system "make", "--directory=src/graph-editor", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-graph-editor", "install"
+
+    # No need to have init.d scripts.
+    remove_dir "#{prefix}/etc/init.d"
   end
 end
 
