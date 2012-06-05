@@ -1,5 +1,5 @@
-Homebrew Formula for TME
-========================
+Homebrew Formulae for TME
+=========================
 
 This repository contains *unofficial* [Homebrew][brew] formulae for installing
 [TME][tme] on Mac OS X.
