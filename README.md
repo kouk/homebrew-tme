@@ -24,8 +24,8 @@ commands:
 	brew install --HEAD tme-common
 	brew install --HEAD tme-broker
 	brew install --HEAD tme-mist
-	brew install --HEAD tme-mist-tools
 	brew install --HEAD tme-portal-collector
+	brew install --HEAD tme-mist-tools
 	brew install --HEAD tme-portal-web
 	brew install --HEAD tme-graph-editor
 
