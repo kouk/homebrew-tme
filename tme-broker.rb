@@ -10,7 +10,7 @@ class TmeBroker < Formula
   depends_on 'tme-common'
 
   def install
-    system "make", "--directory=src/broker", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc", "LIBPATH=lib/tme", "install"
+    system "make", "--directory=src/broker", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-broker", "install"
   end
 end
 

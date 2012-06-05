@@ -11,7 +11,7 @@ class TmeMistTools < Formula
   depends_on 'tme-mist'
 
   def install
-    system "make", "--directory=src/mist-tools", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc", "LIBPATH=lib/tme", "install"
+    system "make", "--directory=src/mist-tools", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-mist-tools", "install"
   end
 end
 

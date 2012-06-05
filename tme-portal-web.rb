@@ -11,7 +11,7 @@ class TmePortalWeb < Formula
   depends_on 'tme-mist'
 
   def install
-    system "make", "--directory=src/portal-web", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc", "LIBPATH=lib/tme", "install"
+    system "make", "--directory=src/portal-web", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-portal-web", "install"
   end
 end
 

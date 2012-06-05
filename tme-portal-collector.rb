@@ -10,7 +10,7 @@ class TmePortalCollector < Formula
   depends_on 'tme-common'
 
   def install
-    system "make", "--directory=src/portal-collector", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc", "LIBPATH=lib/tme", "install"
+    system "make", "--directory=src/portal-collector", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-portal-collector", "install"
   end
 end
 
