@@ -24,13 +24,13 @@ install: uninstall
 	@$(MAKE) install-component NAME=tme-mist;
 	@$(MAKE) install-component NAME=tme-portal-collector;
 	@$(MAKE) install-component NAME=tme-mist-tools;
-#	@$(MAKE) install-component NAME=tme-portal-web;
-#	@$(MAKE) install-component NAME=tme-graph-editor;
+	@$(MAKE) install-component NAME=tme-portal-web;
+	@$(MAKE) install-component NAME=tme-graph-editor;
 
 .PHONY: uninstall
 uninstall:
-#	@$(MAKE) uninstall-component NAME=tme-graph-editor;
-#	@$(MAKE) uninstall-component NAME=tme-portal-web;
+	@$(MAKE) uninstall-component NAME=tme-graph-editor;
+	@$(MAKE) uninstall-component NAME=tme-portal-web;
 	@$(MAKE) uninstall-component NAME=tme-mist-tools;
 	@$(MAKE) uninstall-component NAME=tme-portal-collector;
 	@$(MAKE) uninstall-component NAME=tme-mist;
