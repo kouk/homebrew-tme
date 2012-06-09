@@ -77,7 +77,7 @@ thing.
 
 
 [brew]: http://mxcl.github.com/homebrew/
-[tme]:  http://trendmicro.github.com/tme/
+[tme]:  	http://trendmicro.github.com/tme/
 [badsudo]: https://github.com/mxcl/homebrew/wiki/FAQ#wiki-sudo
 [launchd]: http://en.wikipedia.org/wiki/Launchd
 [monit]:   http://mmonit.com/monit/
