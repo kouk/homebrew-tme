@@ -68,9 +68,16 @@ on Mac for development/demonstration purposes only, there is no need to launch
 TME daemons everytime. Instead, these formulae will provide easy commands to
 initiate/terminate TME environment.
 
+### Monitoring is removed for simplicity
+
+TME daemons are monitored by [monit][monit]. However, since we do not plan to
+run TME on Mac for production purpose, there is no need to do any monitoring.
+Therefore, these formulae will remove monitoring supports to simplify the whole
+thing.
+
 
 [brew]: http://mxcl.github.com/homebrew/
 [tme]:  http://trendmicro.github.com/tme/
 [badsudo]: https://github.com/mxcl/homebrew/wiki/FAQ#wiki-sudo
 [launchd]: http://en.wikipedia.org/wiki/Launchd
-
+[monit]:   http://mmonit.com/monit/
