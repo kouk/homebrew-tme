@@ -75,9 +75,16 @@ run TME on Mac for production purpose, there is no need to do any monitoring.
 Therefore, these formulae will remove monitoring supports to simplify the whole
 thing.
 
+### No need to prepare cluster environment
+
+The formulae will try to embed prerequistie clusters, such as [ZooKeeper][zk],
+so you don't have to prepare them by your self. This can greatly simplify the
+process to build development/demonstration environment.
+
 
 [brew]: http://mxcl.github.com/homebrew/
 [tme]:  	http://trendmicro.github.com/tme/
 [badsudo]: https://github.com/mxcl/homebrew/wiki/FAQ#wiki-sudo
 [launchd]: http://en.wikipedia.org/wiki/Launchd
 [monit]:   http://mmonit.com/monit/
+[zk]:      http://zookeeper.apache.org/
