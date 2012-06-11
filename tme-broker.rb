@@ -35,7 +35,7 @@ class TmeBroker < Formula
     remove     "#{bin}/install_tme-broker.sh"
     remove     "#{bin}/remove_tme-broker.sh"
     # That's skip monit configuration, too.
-    remove     "#{etc}/broker/tme-broker.monit"
+    remove     "#{prefix}/etc/tme/broker/tme-broker.monit"
   end
 end
 
