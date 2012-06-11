@@ -7,14 +7,14 @@ This repository contains *unofficial* [Homebrew][brew] formulae for installing
 Installation
 ------------
 
-Just `brew tap jeffhung/tme` and then `brew install --HEAD <formula>`.
+Just `brew tap trendmicro/tme` and then `brew install --HEAD <formula>`.
 
 If the formula conflicts with one in `mxcl/master`, you can
-`brew install jeffhung/tme/<formula>`.
+`brew install trendmicro/tme/<formula>`.
 
 You can also install via URL:
 
-	brew install --HEAD https://raw.github.com/jeffhung/homebrew-tme/master/<formula>.rb
+	brew install --HEAD https://raw.github.com/trendmicro/homebrew-tme/master/<formula>.rb
 
 ### TME Components
 
