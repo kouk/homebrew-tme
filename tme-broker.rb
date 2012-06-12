@@ -29,6 +29,8 @@ class TmeBroker < Formula
 
     system "make", "--directory=src/broker", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-broker", "install"
 
+    chmod 0400, "#{prefix}/etc/tme/broker/jmxremote.password", :verbose => true
+
     # No need to have init.d scripts.
     remove_dir "#{prefix}/etc/init.d"
     # Can't have install/remove scripts since they depends on init.d script.
