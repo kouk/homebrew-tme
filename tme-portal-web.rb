@@ -11,7 +11,10 @@ class TmePortalWeb < Formula
   depends_on 'tme-mist'
 
   def install
-    system "make", "--directory=src/portal-web", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH0=lib/tme-portal-web", "install"
+    # Create library folder first to force linking JAR files.
+    mkdir_p "#{HOMEBREW_PREFIX}/lib/tme"
+
+    system "make", "--directory=src/portal-web", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH0=lib/tme", "install"
 
     # No need to have init.d scripts.
     remove_dir "#{prefix}/etc/init.d"

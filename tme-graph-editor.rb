@@ -10,7 +10,10 @@ class TmeGraphEditor < Formula
   depends_on 'tme-common'
 
   def install
-    system "make", "--directory=src/graph-editor", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-graph-editor", "install"
+    # Create library folder first to force linking JAR files.
+    mkdir_p "#{HOMEBREW_PREFIX}/lib/tme"
+
+    system "make", "--directory=src/graph-editor", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme", "install"
 
     # No need to have init.d scripts.
     remove_dir "#{prefix}/etc/init.d"

@@ -11,7 +11,10 @@ class TmeMistTools < Formula
   depends_on 'tme-mist'
 
   def install
-    system "make", "--directory=src/mist-tools", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme-mist-tools", "install"
+    # Create library folder first to force linking JAR files.
+    mkdir_p "#{HOMEBREW_PREFIX}/lib/tme"
+
+    system "make", "--directory=src/mist-tools", "BUILD_PREFIX=#{prefix}", "INSTALLPATH=", "CONFPATH=etc/tme", "LIBPATH=lib/tme", "install"
 
     # Executables don't have to put in $BUILD_PREFIX/usr/bin since homebrew
     # will help create symlinks in #{HOMEBREW_PREFIX}/bin.
