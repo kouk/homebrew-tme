@@ -33,10 +33,10 @@ end
 
 __END__
 diff --git a/src/broker/bin/broker.sh b/src/broker/bin/broker.sh
-index e7c1068..83a9292 100755
+index e7c1068..28596ca 100755
 --- a/src/broker/bin/broker.sh
 +++ b/src/broker/bin/broker.sh
-@@ -1,19 +1,23 @@
+@@ -1,19 +1,24 @@
  #!/bin/bash
  
 -source /opt/trend/tme/conf/common/common-env.sh
@@ -62,6 +62,7 @@ index e7c1068..83a9292 100755
 +# Overwrite default properties.
 +JVM_ARGS="$JVM_ARGS -Dcom.trendmicro.tme.broker.mqhome=HOMEBREW_PREFIX"
 +JVM_ARGS="$JVM_ARGS -Dcom.trendmicro.tme.broker.mqvar=HOMEBREW_PREFIX/var/lib/tme/broker"
++JVM_ARGS="$JVM_ARGS -Dcom.trendmicro.tme.broker.mqlib=HOMEBREW_PREFIX/lib/tme"
 +JVM_ARGS="$JVM_ARGS -Dcom.trendmicro.tme.broker.config=HOMEBREW_PREFIX/etc/tme/broker/config.properties"
  
  if [ "$1" == "daemon" ]
@@ -128,5 +129,4 @@ index 8451f5e..3ce0e40 100644
 +   with pidfile "HOMEBREW_PREFIX/var/run/tme/tme-broker.pid"
 +   start program = "HOMEBREW_PREFIX/etc/init.d/tme-broker start"
 +   stop program = "HOMEBREW_PREFIX/etc/init.d/tme-broker stop"
-
 
