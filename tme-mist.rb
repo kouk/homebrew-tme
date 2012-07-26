@@ -21,6 +21,11 @@ class TmeMist < Formula
     mv "#{prefix}/usr/bin/tme-console",    "#{prefix}/bin/"
     remove_dir "#{prefix}/usr/bin"
     remove_dir "#{prefix}/usr"
+    # Both common and mist modules of TME will install junit-3.8.1.jar.
+    # This is OK for TME since it use `cp -rf` when installing.
+    # But in Homebrew the final linking will fail due to existing link.
+    # Since they are same JAR anyway, we'll simply delete it here.
+    rm_f "#{prefix}/lib/tme/junit-3.8.1.jar"
 
     # No need to have init.d scripts.
     remove_dir "#{prefix}/etc/init.d"
