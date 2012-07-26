@@ -7,6 +7,7 @@ class TmePortalWeb < Formula
 
 # depends_on 'cmake'
 # depends_on 'rvm'
+  depends_on 'coreutils'  # mkmf needs /usr/local/bin/gmkdir
   depends_on 'tme-common'
   depends_on 'tme-mist'
 
